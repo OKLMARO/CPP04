@@ -6,7 +6,7 @@
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 17:30:52 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/12 14:30:35 by oamairi          ###   ########.fr       */
+/*   Updated: 2026/03/15 14:40:19 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,10 @@ Animal::Animal()
 	std::cout << "Default Animal constructor called !\n";
 }
 
-Animal::Animal(Animal &old)
+Animal::Animal(Animal const &old)
 {
-	*this = old;
+	this->_type = old._type;
+	std::cout << "Animal copy constructor called !\n";
 }
 
 Animal::Animal(std::string type)
@@ -28,13 +29,22 @@ Animal::Animal(std::string type)
 	std::cout << "Animal constructor called !\n";
 }
 
-Animal	&Animal::operator=(Animal &old)
+Animal	&Animal::operator=(Animal const &old)
 {
 	if (this != &old)
 	{
 		this->_type = old._type;
 	}
 	std::cout << "Animal copy assigment called !\n";
+	return *this;
 }
 
-Animal::~Animal(){};
+void	Animal::makeSound(void)
+{
+	std::cout << "Sound not defined ...\n";
+}
+
+Animal::~Animal()
+{
+	std::cout << "Animal destructor called !\n";
+}
