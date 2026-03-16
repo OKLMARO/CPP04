@@ -6,7 +6,7 @@
 #    By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/03/12 14:07:52 by oamairi           #+#    #+#              #
-#    Updated: 2026/03/15 14:32:30 by oamairi          ###   ########.fr        #
+#    Updated: 2026/03/16 12:29:59 by oamairi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC		=	c++
 
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
-SRCS	=	Animal.cpp Dog.cpp Cat.cpp main.cpp
+SRCS	=	Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongDog.cpp WrongCat.cpp main.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 

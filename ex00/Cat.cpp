@@ -6,7 +6,7 @@
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 14:26:03 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/15 14:41:11 by oamairi          ###   ########.fr       */
+/*   Updated: 2026/03/16 12:12:43 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ Cat	&Cat::operator=(Cat const &old)
 	return *this;
 }
 
-void	Cat::makeSound(void)
+void	Cat::makeSound(void) const
 {
 	std::cout << "Miaou !\n";
 }

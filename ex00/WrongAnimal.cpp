@@ -1,55 +1,56 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/11 17:30:52 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/16 12:12:43 by oamairi          ###   ########.fr       */
+/*   Created: 2026/03/16 12:21:06 by oamairi           #+#    #+#             */
+/*   Updated: 2026/03/16 12:22:15 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
-Animal::Animal()
+WrongAnimal::WrongAnimal()
 {
-	std::cout << "Default Animal constructor called !\n";
+	std::cout << "Default WrongAnimal constructor called !\n";
 }
 
-Animal::Animal(Animal const &old)
+WrongAnimal::WrongAnimal(WrongAnimal const &old)
 {
 	this->_type = old._type;
-	std::cout << "Animal copy constructor called !\n";
+	std::cout << "WrongAnimal copy constructor called !\n";
 }
 
-Animal::Animal(std::string type)
+WrongAnimal::WrongAnimal(std::string type)
 {
 	this->_type = type;
-	std::cout << "Animal constructor called !\n";
+	std::cout << "WrongAnimal constructor called !\n";
 }
 
-std::string	Animal::getType(void) const
+std::string	WrongAnimal::getType(void) const
 {
 	return this->_type;
 }
 
-Animal	&Animal::operator=(Animal const &old)
+WrongAnimal	&WrongAnimal::operator=(WrongAnimal const &old)
 {
 	if (this != &old)
 	{
 		this->_type = old._type;
 	}
-	std::cout << "Animal copy assigment called !\n";
+	std::cout << "WrongAnimal copy assigment called !\n";
 	return *this;
 }
 
-void	Animal::makeSound(void) const
+void	WrongAnimal::makeSound(void) const
 {
 	std::cout << "Sound not defined ...\n";
 }
 
-Animal::~Animal()
+WrongAnimal::~WrongAnimal()
 {
 	std::cout << "Animal destructor called !\n";
 }
+
