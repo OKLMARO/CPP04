@@ -6,15 +6,15 @@
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 14:26:23 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/16 14:11:57 by oamairi          ###   ########.fr       */
+/*   Updated: 2026/03/16 16:05:47 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 
-class Dog : public Animal
+class Dog : public AAnimal
 {
 public:
 	Dog();

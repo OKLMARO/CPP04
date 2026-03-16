@@ -1,70 +1,66 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   AAnimal.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/11 17:30:52 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/16 16:56:48 by oamairi          ###   ########.fr       */
+/*   Created: 2026/03/16 15:58:14 by oamairi           #+#    #+#             */
+/*   Updated: 2026/03/16 16:56:37 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 
-Animal::Animal()
+AAnimal::AAnimal()
 {
-	std::cout << "Default Animal constructor called !\n";
+	this->brain = new Brain;
+	std::cout << "Default AAnimal constructor called !\n";
 }
 
-Animal::Animal(Animal const &old)
+AAnimal::AAnimal(AAnimal const &old)
 {
 	this->_type = old._type;
 	this->brain = new Brain(*old.brain);
-	std::cout << "Animal copy constructor called !\n";
+	std::cout << "AAnimal copy constructor called !\n";
 }
 
-Animal::Animal(std::string type)
+AAnimal::AAnimal(std::string type)
 {
 	this->_type = type;
 	this->brain = new Brain;
-	std::cout << "Animal constructor called !\n";
+	std::cout << "AAnimal constructor called !\n";
 }
 
-std::string	Animal::getType(void) const
+std::string	AAnimal::getType(void) const
 {
 	return this->_type;
 }
 
-Animal	&Animal::operator=(Animal const &old)
+AAnimal	&AAnimal::operator=(AAnimal const &old)
 {
 	if (this != &old)
 	{
 		delete this->brain;
 		this->brain = new Brain(*old.brain);
 		this->_type = old._type;
-		std::cout << "Animal copy assigment called !\n";
+		std::cout << "AAnimal copy assigment called !\n";
 	}
 	return *this;
 }
 
-void	Animal::makeSound(void) const
-{
-	std::cout << "Sound not defined ...\n";
-}
-
-void	Animal::setIdea(std::string idea, int index)
+void	AAnimal::setIdea(std::string idea, int index)
 {
 	this->brain->setIdeas(idea, index);
 }
 
-std::string	Animal::getIdea(int index)
+std::string	AAnimal::getIdea(int index)
 {
 	return this->brain->getIdeas(index);
 }
 
-Animal::~Animal()
+AAnimal::~AAnimal()
 {
 	delete this->brain;
-	std::cout << "Animal destructor called !\n";
+	std::cout << "AAnimal destructor called !\n";
 }

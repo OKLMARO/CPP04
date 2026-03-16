@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   AAnimal.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/12 14:26:06 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/16 16:05:29 by oamairi          ###   ########.fr       */
+/*   Created: 2026/03/16 15:58:10 by oamairi           #+#    #+#             */
+/*   Updated: 2026/03/16 16:03:10 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "AAnimal.hpp"
+#include <iostream>
+#include "Brain.hpp"
 
-class Cat : public AAnimal
+class AAnimal
 {
+protected:
+	Brain*		brain;
+	std::string	_type;
 public:
-	Cat();
-	Cat(Cat const &old);
-	void	makeSound(void) const;
-	Cat	&operator=(Cat const &old);
-	~Cat();
+	AAnimal();
+	AAnimal(std::string type);
+	AAnimal(AAnimal const &old);
+	std::string		getIdea(int index);
+	std::string		getType(void) const;
+	virtual void	makeSound(void) const = 0;
+	AAnimal			&operator=(AAnimal const &old);
+	void			setIdea(std::string idea, int index);
+	virtual ~AAnimal();
 };

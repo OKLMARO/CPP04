@@ -6,7 +6,7 @@
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 17:30:52 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/16 14:29:28 by oamairi          ###   ########.fr       */
+/*   Updated: 2026/03/16 16:56:43 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,14 @@ Animal::Animal()
 Animal::Animal(Animal const &old)
 {
 	this->_type = old._type;
+	this->brain = new Brain(*old.brain);
 	std::cout << "Animal copy constructor called !\n";
 }
 
 Animal::Animal(std::string type)
 {
 	this->_type = type;
+	this->brain = new Brain;
 	std::cout << "Animal constructor called !\n";
 }
 
@@ -38,9 +40,11 @@ Animal	&Animal::operator=(Animal const &old)
 {
 	if (this != &old)
 	{
+		delete this->brain;
+		this->brain = new Brain(*old.brain);
 		this->_type = old._type;
+		std::cout << "Animal copy assigment called !\n";
 	}
-	std::cout << "Animal copy assigment called !\n";
 	return *this;
 }
 
@@ -61,5 +65,6 @@ std::string	Animal::getIdea(int index)
 
 Animal::~Animal()
 {
+	delete this->brain;
 	std::cout << "Animal destructor called !\n";
 }

@@ -6,17 +6,17 @@
 #    By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/03/12 14:07:52 by oamairi           #+#    #+#              #
-#    Updated: 2026/03/16 14:03:37 by oamairi          ###   ########.fr        #
+#    Updated: 2026/03/16 16:06:52 by oamairi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	ex01
+NAME	=	ex02
 
 CC		=	c++
 
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
-SRCS	=	Animal.cpp Dog.cpp Cat.cpp Brain.cpp main.cpp
+SRCS	=	AAnimal.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp main.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 

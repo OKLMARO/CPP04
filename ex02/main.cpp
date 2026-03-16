@@ -6,7 +6,7 @@
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 14:07:30 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/16 14:33:44 by oamairi          ###   ########.fr       */
+/*   Updated: 2026/03/16 16:06:24 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 
 int main()
 {
-	Animal* j = new Dog();
-	Animal* i = new Cat();
+	AAnimal* j = new Dog();
+	AAnimal* i = new Cat();
 	j->setIdea("Je suis cool", 0);
 	j->setIdea("Je suis beau", 1);
 	i->setIdea("Je suis mignon", 2);
