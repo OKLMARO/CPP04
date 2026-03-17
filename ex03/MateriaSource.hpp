@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.hpp                                       :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/16 17:12:20 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/17 14:07:30 by oamairi          ###   ########.fr       */
+/*   Created: 2026/03/17 13:32:59 by oamairi           #+#    #+#             */
+/*   Updated: 2026/03/17 15:25:55 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <iostream>
-#include "ICharacter.hpp"
+#include "IMateriaSource.hpp"
+#include "AMateria.hpp"
+#include "Cure.hpp"
+#include "Ice.hpp"
 
-class AMateria
+class MateriaSource : public IMateriaSource
 {
-protected:
-	std::string type;
+private:
+	AMateria*	learned[4];
 public:
-	AMateria();
-	AMateria(AMateria const &old);
-	AMateria(std::string const &type);
-	std::string		const &getType() const; //Returns the materia type
-	virtual void	use(ICharacter &target);
-	virtual			AMateria* clone() const = 0;
-	AMateria		&operator=(AMateria const &old);
-	virtual ~AMateria();
+	MateriaSource();
+	MateriaSource(MateriaSource const &old);
+	void			learnMateria(AMateria *m);
+	MateriaSource	&operator=(MateriaSource const &old);
+	AMateria		*createMateria(std::string const & type);
+	~MateriaSource();
 };

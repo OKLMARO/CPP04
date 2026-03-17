@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.hpp                                       :+:      :+:    :+:   */
+/*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/16 17:12:20 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/17 14:07:30 by oamairi          ###   ########.fr       */
+/*   Created: 2026/03/17 15:02:22 by oamairi           #+#    #+#             */
+/*   Updated: 2026/03/17 15:05:37 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "Ice.hpp"
 
-#include <iostream>
-#include "ICharacter.hpp"
+Ice::Ice() : AMateria("ice"){};
 
-class AMateria
+AMateria*	Ice::clone() const
 {
-protected:
-	std::string type;
-public:
-	AMateria();
-	AMateria(AMateria const &old);
-	AMateria(std::string const &type);
-	std::string		const &getType() const; //Returns the materia type
-	virtual void	use(ICharacter &target);
-	virtual			AMateria* clone() const = 0;
-	AMateria		&operator=(AMateria const &old);
-	virtual ~AMateria();
-};
+	return new Ice;
+}
+
+void	Ice::use(ICharacter& target)
+{
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *\n";
+}
+
+Ice::~Ice(){};
