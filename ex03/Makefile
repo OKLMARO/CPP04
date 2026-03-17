@@ -6,7 +6,7 @@
 #    By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/03/16 17:01:56 by oamairi           #+#    #+#              #
-#    Updated: 2026/03/16 17:02:18 by oamairi          ###   ########.fr        #
+#    Updated: 2026/03/17 15:30:29 by oamairi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC		=	c++
 
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
-SRCS	=	main.cpp
+SRCS	=	AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp main.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 
