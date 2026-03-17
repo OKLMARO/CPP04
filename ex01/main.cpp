@@ -6,7 +6,7 @@
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 14:07:30 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/16 16:43:43 by oamairi          ###   ########.fr       */
+/*   Updated: 2026/03/17 15:38:27 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,7 @@ int main()
 	std::cout << cat3->getType() << " a dit: " << cat3->getIdea(1) << "\n";
 	delete j;
 	delete i;
+	delete cat1;
+	delete cat2;
 	return 0;
 }

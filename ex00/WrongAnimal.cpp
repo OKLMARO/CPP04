@@ -6,7 +6,7 @@
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/16 12:21:06 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/16 12:22:15 by oamairi          ###   ########.fr       */
+/*   Updated: 2026/03/17 15:39:35 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,6 @@ void	WrongAnimal::makeSound(void) const
 
 WrongAnimal::~WrongAnimal()
 {
-	std::cout << "Animal destructor called !\n";
+	std::cout << "WrongAnimal destructor called !\n";
 }
 

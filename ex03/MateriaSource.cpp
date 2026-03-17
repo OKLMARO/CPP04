@@ -6,7 +6,7 @@
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/17 15:05:46 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/17 15:27:59 by oamairi          ###   ########.fr       */
+/*   Updated: 2026/03/17 15:49:06 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	MateriaSource::learnMateria(AMateria *m)
 	{
 		if (!this->learned[i])
 		{
-			this->learned[i] = m->clone();
+			this->learned[i] = m;
 			return ;
 		}
 	}
