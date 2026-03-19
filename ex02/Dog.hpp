@@ -6,7 +6,7 @@
 /*   By: oamairi <oamairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 14:26:23 by oamairi           #+#    #+#             */
-/*   Updated: 2026/03/16 16:05:47 by oamairi          ###   ########.fr       */
+/*   Updated: 2026/03/19 13:54:13 by oamairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,14 @@
 
 class Dog : public AAnimal
 {
+private:
+	Brain *brain;
 public:
 	Dog();
 	Dog(Dog const &old);
-	void	makeSound(void) const;
+	std::string	getIdea(int index);
+	void		makeSound(void) const;
+	void		setIdea(std::string idea, int index);
 	Dog	&operator=(Dog const &old);
 	~Dog();
 };
